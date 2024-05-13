@@ -1,0 +1,12 @@
+{
+  "name": "@ape-spa/ape-story",
+  "author": "SafariLib",
+  "version": "0.1.0",
+  "description": "Basic story rendering frontend for Web Components development.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc-watch --onSuccess \"node ./dist/index.js\"",
+    "build": "tsc && vite build"
+  }
+}
