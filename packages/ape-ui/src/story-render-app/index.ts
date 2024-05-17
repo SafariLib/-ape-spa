@@ -1,7 +1,7 @@
-import http from 'node:http';
+import { createServer } from 'node:http';
 import { renderAppView, renderErrorView, stylesheets } from './templates/index.js';
 
-const server = http.createServer();
+const server = createServer();
 
 server.on('request', async (req, res) => {
     const endpoint = req.url ?? '/';
@@ -20,12 +20,11 @@ server.on('request', async (req, res) => {
             return;
 
         case '/subscribe':
-            const headers = {
+            res.writeHead(200, {
                 'Content-Type': 'text/event-stream',
                 Connection: 'keep-alive',
                 'Cache-Control': 'no-cache',
-            };
-            res.writeHead(200, headers);
+            });
             res.write('data: connected');
             return;
 

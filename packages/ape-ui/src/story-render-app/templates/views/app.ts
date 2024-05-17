@@ -20,6 +20,7 @@ export default (payload?: { story?: string }) => html`
             <link href="/styles/scrollbar.css" rel="stylesheet" />
             <title>Ape-Stories</title>
         </head>
+        <script src="../ape-ui.js" type="module"></script>
         <script>
             const hotReload = new EventSource('/subscribe');
             // Disgusting hack to reload the page when the server restarts
