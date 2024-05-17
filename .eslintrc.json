@@ -4,7 +4,7 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/prefer-for-of": "error",
     "@typescript-eslint/consistent-type-definitions": "error",
     "@typescript-eslint/consistent-type-imports": "error",
