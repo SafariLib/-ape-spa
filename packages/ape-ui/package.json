@@ -1,8 +1,8 @@
 {
-  "name": "@ape-spa/ape-story",
+  "name": "@ape-spa/ape-ui",
   "author": "SafariLib",
   "version": "0.1.0",
-  "description": "Basic story rendering frontend for Web Components development.",
+  "description": "Web Components library for Safari applications.",
   "type": "module",
   "license": "MIT",
   "scripts": {
