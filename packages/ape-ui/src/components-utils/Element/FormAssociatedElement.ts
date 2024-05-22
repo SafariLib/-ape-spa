@@ -1,4 +1,4 @@
-import { Element } from './Element.js';
+import { Element } from './Element';
 
 /**
  * Form associated element

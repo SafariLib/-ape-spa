@@ -1,2 +1,2 @@
-export { Element } from './Element/Element.js';
-export { FormAssociatedElement } from './Element/FormAssociatedElement.js';
+export { Element } from './Element/Element';
+export { FormAssociatedElement } from './Element/FormAssociatedElement';

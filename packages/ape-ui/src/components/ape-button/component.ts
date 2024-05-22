@@ -1,15 +1,14 @@
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { FormAssociatedElement } from '../../components-utils/index.js';
-
-// import styles from './styles';
-// WIP
+import { FormAssociatedElement } from '../../components-utils';
+import { fonts } from '../../components-utils/stylesheets';
+import styles from './styles';
 
 @customElement('ape-button')
 export class ApeButton extends FormAssociatedElement {
-    // static styles = [styles];
+    static styles = [fonts, styles];
 
-    @property({ type: String, reflect: true }) variant?: Variant = 'primary';
+    @property({ type: String, reflect: true }) variant?: ApeButtonVariant = 'primary';
     @property({ type: Boolean, reflect: true }) loading = false;
     @property({ type: Boolean, reflect: true }) disabled = false;
     @property({ type: Boolean, reflect: true }) selected = false;
@@ -19,12 +18,15 @@ export class ApeButton extends FormAssociatedElement {
     render() {
         return this.href
             ? html`
-                  <a class=${this.tagName} @click=${this._handleClick} ?disabled=${this.disabled}>
+                  <a class=${this.getElementTagName()} @click=${this._handleClick} ?disabled=${this.disabled}>
                       ${this._renderContent()}
                   </a>
               `
             : html`
-                  <button class=${this.tagName} @click=${this._handleClick} ?disabled=${this.disabled}>
+                  <button
+                      class=${this.getElementTagName()}
+                      @click=${this._handleClick}
+                      ?disabled=${this.disabled}>
                       ${this._renderContent()}
                   </button>
               `;
@@ -56,7 +58,7 @@ export class ApeButton extends FormAssociatedElement {
     }
 }
 
-type Variant = 'primary' | 'secondary' | 'text';
+export type ApeButtonVariant = 'primary' | 'secondary' | 'text';
 
 declare global {
     interface HTMLElementTagNameMap {
