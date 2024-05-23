@@ -38,13 +38,13 @@ export default css`
         --translate: 24px;
     }
 
-    .ellipsis {
+    .ape-loader {
         display: inline-block;
         position: relative;
         width: var(--size-block);
     }
 
-    .ellipsis div {
+    .ape-loader div {
         position: absolute;
         width: var(--size-dot);
         height: var(--size-dot);

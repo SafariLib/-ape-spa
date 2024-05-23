@@ -12,7 +12,7 @@ export class ApeLoader extends Element {
     @property({ type: String, reflect: true }) size: RelativeSize = 'medium';
 
     render() {
-        return html` <div class="ellipsis"> ${mapElements(4, html`<div></div>`)} </div> `;
+        return html` <div class=${this.getElementTagName()}> ${mapElements(4, html`<div></div>`)} </div> `;
     }
 }
 

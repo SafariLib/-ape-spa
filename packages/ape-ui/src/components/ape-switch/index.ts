@@ -1,0 +1,1 @@
+export { ApeSwitch } from './component';
