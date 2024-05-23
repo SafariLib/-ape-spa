@@ -2,6 +2,7 @@ import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { FormAssociatedElement } from '../../components-utils';
 import { fonts } from '../../components-utils/stylesheets';
+import type { ApeButtonVariant } from '../../components-utils/types';
 import styles from './styles';
 
 @customElement('ape-button')
@@ -57,8 +58,6 @@ export class ApeButton extends FormAssociatedElement {
         `;
     }
 }
-
-export type ApeButtonVariant = 'primary' | 'secondary' | 'text';
 
 declare global {
     interface HTMLElementTagNameMap {

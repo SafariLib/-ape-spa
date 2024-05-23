@@ -1,1 +1,1 @@
-export { ApeButton, type ApeButtonVariant } from './component';
+export { ApeButton } from './component';
