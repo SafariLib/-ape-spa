@@ -3,7 +3,6 @@ import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
-    define: { global: 'globalThis' },
     plugins: [
         dts({
             rollupTypes: true,
@@ -13,7 +12,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: resolve(__dirname, 'src/index.ts'),
-            name: '@ape-spa/ape-router',
+            name: 'ape-ui',
             formats: ['es', 'umd'],
             fileName: format => `index.${format}.js`,
         },

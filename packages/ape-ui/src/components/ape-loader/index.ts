@@ -1,0 +1,1 @@
+export { ApeLoader } from './component';

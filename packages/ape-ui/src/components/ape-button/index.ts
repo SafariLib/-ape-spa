@@ -1,0 +1,1 @@
+export { ApeButton } from './component';

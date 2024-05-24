@@ -2,7 +2,8 @@ node_modules
 build
 dist
 
-*/**/*.tsbuildinfo
+.vscode
+.idea
 
-# packages specific
-!*/urlpattern-polyfill.js
+*/**/*.tsbuildinfo
+*storybook.log
