@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>ape-router test</title>
+</head>
+<body>
+<script>
+    window.global = globalThis;
+</script>
+<script src="src/polyfills/load-urlpattern.ts" type="module"></script>
+<script src="./src/index.ts" type="module"></script>
+<script src="./src/tests/utility-tests.ts" type="module"></script>
+<script src="./src/tests/router-tests.ts" type="module"></script>
+<div id="root">
+    <div id="utility-tests"></div>
+    <div id="router-tests"></div>
+    <router-test></router-test>
+</div>
+</body>
+</html>
