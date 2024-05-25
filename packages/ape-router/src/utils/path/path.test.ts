@@ -1,12 +1,12 @@
 import { expect, test } from 'vitest';
-import { getOrigin, getPathParams } from './path';
+import { getLocationOrigin, getPathParams } from './path';
 import { URLPattern } from 'urlpattern-polyfill';
 
 test('getOrigin: Should return the correct origin', () => {
     location.protocol = 'https:';
     location.host = 'example.com';
     location.port = '';
-    expect(getOrigin()).toBe('https://example.com');
+    expect(getLocationOrigin()).toBe('https://example.com');
 });
 
 test('getPathParams: Should return the correct path parameters', () => {

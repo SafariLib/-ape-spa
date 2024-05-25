@@ -1,6 +1,6 @@
 import {
     getElementFromEvent,
-    getOrigin,
+    getLocationOrigin,
     getPathParams,
     isNavigationAnchor,
     isNavigationClickEvent,
@@ -9,9 +9,16 @@ import {
 import type { ReactiveControllerHost } from 'lit';
 import type { Route, RouteParameters, RouterConfiguration, View } from './types';
 
+/**
+ * Router controller that handles navigation and rendering of views. Create a new instance of Router
+ * by passing the host and a configuration object containing the routes and a fallback view.
+ * @warning
+ * - The routes array contains objects with a path, name, and render function.
+ * - The fallback object contains a render function that will be used when no route is found.
+ * - Don't create multiple instances of Router.
+ */
 export class Router {
     private readonly _host: ReactiveControllerHost;
-    private readonly _origin = getOrigin();
     private readonly _routes: Array<Route> = [];
     private readonly _fallback: View | undefined;
 
@@ -26,12 +33,19 @@ export class Router {
         this._fallback = payload.fallback;
 
         window.addEventListener('popstate', this._onPopState);
-        document.addEventListener('click', this._handleClick);
+        document.addEventListener('click', this._handleClick.bind(this));
         this._navigate(window.location.pathname);
     }
 
     render() {
         return this._currentRoute?.render(this._currentRoute.params);
+    }
+
+    private _navigate(pathname: string) {
+        const route = this._getRoute(pathname);
+        const params = getPathParams(pathname, route.pattern);
+        this._currentRoute = { ...route, params };
+        this._host.requestUpdate();
     }
 
     private _getRoute(pathname: string) {
@@ -48,20 +62,13 @@ export class Router {
             !anchor ||
             !isNavigationClickEvent(event) ||
             !isNavigationAnchor(anchor) ||
-            !isNavigationFromOrigin(anchor, this._origin)
+            !isNavigationFromOrigin(anchor, getLocationOrigin())
         )
             return;
 
         event.preventDefault();
         window.history.pushState({}, '', anchor.href);
         this._navigate(anchor.pathname);
-    }
-
-    private _navigate(pathname: string) {
-        const route = this._getRoute(pathname);
-        const params = getPathParams(pathname, route.pattern);
-        this._currentRoute = { ...route, params };
-        this._host.requestUpdate();
     }
 
     private _onPopState = () => this._navigate(window.location.pathname);
