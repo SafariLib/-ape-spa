@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { Router } from '../Router/Router';
+import { Router } from './Router/Router';
 
 @customElement('router-test')
 export class RouterTest extends LitElement {

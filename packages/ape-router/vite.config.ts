@@ -21,4 +21,8 @@ export default defineConfig({
             fileName: format => `index.${format}.js`,
         },
     },
+    test: {
+        globals: true,
+        environment: 'happy-dom',
+    },
 });

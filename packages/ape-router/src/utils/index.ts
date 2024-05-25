@@ -1,2 +1,2 @@
-export * from './path';
-export * from './events';
+export * from './path/path';
+export * from './events/events';
