@@ -22,7 +22,15 @@
     "type": "git",
     "url": "https://github.com/SafariLib/ape-spa.git"
   },
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest",
+    "build": "tsc --project tsconfig.json && vite build"
+  },
+  "dependencies": {
+    "urlpattern-polyfill": "^10.0.0"
+  },
+  "peerDependencies": {
+    "urlpattern-polyfill": "^10.0.0"
+  }
 }
