@@ -1,7 +1,6 @@
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { Element, mapElements } from '../../components-utils';
-import type { RelativeSize } from '../../components-utils/types';
+import { Element, mapElements, type RelativeSize } from '../../components-utils';
 import styles from './styles';
 
 @customElement('ape-loader')

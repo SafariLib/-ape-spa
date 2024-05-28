@@ -5,7 +5,7 @@ import type {
     IconVariant,
     PaletteColor,
     RelativeSizeOrFullWidth,
-} from '../../components-utils/types';
+} from '../../components-utils';
 import Icons from './index';
 
 const renderIcons = (args: Args) => html`

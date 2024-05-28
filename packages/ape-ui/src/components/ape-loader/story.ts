@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import type { PaletteColor, RelativeSize } from '../../components-utils/types';
+import type { PaletteColor, RelativeSize } from '../../components-utils';
 import './component';
 
 const meta: Meta = {

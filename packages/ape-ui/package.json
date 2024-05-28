@@ -1,16 +1,49 @@
 {
   "name": "@ape-spa/ape-ui",
   "author": "SafariLib",
-  "version": "0.1.0",
   "description": "Web Components library for Safari applications.",
+  "version": "0.1.1",
+  "homepage": "https://github.com/SafariLib/ape-spa/tree/master/packages/ape-ui#readme",
   "type": "module",
   "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "readme": "README.md",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SafariLib/ape-spa.git"
+  },
+  "keywords": [
+    "ui",
+    "component",
+    "web-component",
+    "library"
+],
   "scripts": {
     "build": "tsc --project tsconfig.json && vite build",
+    "build:storybook": "storybook build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "deploy": "pnpm build && npm publish --access public"
   },
   "devDependencies": {
+    "@fontsource/allison": "^5.0.20",
+    "@fontsource/roboto": "^5.0.13",
     "@storybook/addon-essentials": "^8.1.2",
     "@storybook/addon-links": "^8.1.2",
     "@storybook/blocks": "^8.1.2",
@@ -18,9 +51,5 @@
     "@storybook/web-components": "^8.1.2",
     "@storybook/web-components-vite": "^8.1.2",
     "storybook": "^8.1.2"
-  },
-  "dependencies": {
-    "@fontsource/allison": "^5.0.20",
-    "@fontsource/roboto": "^5.0.13"
   }
 }

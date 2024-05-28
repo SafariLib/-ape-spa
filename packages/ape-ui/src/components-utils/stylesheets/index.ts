@@ -1,5 +1,7 @@
-export { default as fonts } from './fonts';
-export { default as spacing } from './spacing';
-export { default as text } from './text';
-export { default as themeDark } from './theme-dark';
-export { default as themeLight } from './theme-light';
+import fonts from './fonts';
+import spacing from './spacing';
+import text from './text';
+import themeDark from './theme-dark';
+import themeLight from './theme-light';
+
+export const stylesheets = { fonts, spacing, text, themeDark, themeLight };

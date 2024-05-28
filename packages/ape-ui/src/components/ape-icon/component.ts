@@ -1,11 +1,11 @@
 ﻿import { property } from 'lit/decorators.js';
-import { Element } from '../../components-utils';
-import type {
-    Direction,
-    IconVariant,
-    PaletteColor,
-    RelativeSizeOrFullWidth,
-} from '../../components-utils/types';
+import {
+    Element,
+    type Direction,
+    type IconVariant,
+    type PaletteColor,
+    type RelativeSizeOrFullWidth
+} from '../../components-utils';
 import styles from './styles';
 
 export class BaseIcon extends Element {

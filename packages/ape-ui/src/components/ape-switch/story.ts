@@ -1,14 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit/static-html.js';
+import { stylesheets } from '../../components-utils';
 import './component';
-import { fonts } from '../../components-utils/stylesheets';
 
 const meta: Meta = {
     title: 'Inputs/ape-switch',
     component: 'ape-switch',
     render: args => html`
         <style>
-            ${fonts} .wrapper {
+            ${stylesheets.fonts} 
+            .wrapper {
                 display: flex;
                 flex-direction: column;
                 gap: 1.2rem;
