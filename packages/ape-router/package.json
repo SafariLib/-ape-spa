@@ -3,13 +3,20 @@
   "author": "SafariLib",
   "description": "Basic frontend router for single page applications.",
   "version": "0.1.0",
-  "homepage": "",
+  "homepage": "https://github.com/SafariLib/ape-spa/tree/master/packages/ape-router#readme",
   "type": "module",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "readme": "README.md",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "README.md",
     "LICENSE",
@@ -22,15 +29,23 @@
     "type": "git",
     "url": "https://github.com/SafariLib/ape-spa.git"
   },
+  "keywords": [
+    "ui",
+    "component",
+    "web-component",
+    "library"
+],
   "scripts": {
     "dev": "vite",
     "test": "vitest",
-    "build": "tsc --project tsconfig.json && vite build"
+    "build": "tsc --project tsconfig.json && vite build",
+    "deploy": "pnpm build && npm publish --access public"
   },
-  "dependencies": {
+  "devDependencies": {
     "urlpattern-polyfill": "^10.0.0"
   },
   "peerDependencies": {
+    "lit": "^3.1.3",
     "urlpattern-polyfill": "^10.0.0"
   }
 }

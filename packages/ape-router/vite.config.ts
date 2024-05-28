@@ -18,7 +18,7 @@ export default defineConfig({
             entry: resolve(__dirname, 'src/index.ts'),
             name: 'ape-ui',
             formats: ['es', 'umd'],
-            fileName: format => `index.${format}.js`,
+            fileName: format => `index.${format}.js`
         },
     },
     test: {

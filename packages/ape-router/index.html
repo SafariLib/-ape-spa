@@ -12,9 +12,14 @@
     }
 </style>
 <script>
-    window.global = globalThis;
+    (async () => {
+        window.global = globalThis;
+        if (globalThis?.URLPattern === undefined) {
+            console.warn('@ape-spa/ape-router: URLPattern does not exist, importing polyfill');
+            await import('./node_modules/urlpattern-polyfill');
+        }
+    })();
 </script>
-<script src="src/polyfills/load-urlpattern.ts" type="module"></script>
 <script src="src/index.ts" type="module"></script>
 <script src="src/Router/Demo.ts" type="module"></script>
 <div id="root">
