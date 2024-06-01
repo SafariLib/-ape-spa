@@ -34,7 +34,7 @@
     "component",
     "web-component",
     "library"
-],
+  ],
   "scripts": {
     "build": "tsc --project tsconfig.json && vite build",
     "build:storybook": "storybook build",
@@ -42,8 +42,12 @@
     "deploy": "pnpm build && npm publish --access public"
   },
   "devDependencies": {
+    "@fontsource-variable/noto-emoji": "^5.0.19",
+    "@fontsource-variable/roboto-serif": "^5.0.14",
     "@fontsource/allison": "^5.0.20",
+    "@fontsource/noto-color-emoji": "^5.0.27",
     "@fontsource/roboto": "^5.0.13",
+    "@fontsource/roboto-mono": "^5.0.18",
     "@storybook/addon-essentials": "^8.1.2",
     "@storybook/addon-links": "^8.1.2",
     "@storybook/blocks": "^8.1.2",

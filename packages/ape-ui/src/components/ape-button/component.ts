@@ -1,11 +1,12 @@
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { FormAssociatedElement, stylesheets, type ApeButtonVariant } from '../../components-utils';
+import { FormAssociatedElement, type ApeButtonVariant } from '../../utils';
+import { fonts } from '../../utils/stylesheets';
 import styles from './styles';
 
 @customElement('ape-button')
 export class ApeButton extends FormAssociatedElement {
-    static styles = [stylesheets.fonts, styles];
+    static styles = [fonts, styles];
 
     @property({ type: String, reflect: true }) variant?: ApeButtonVariant = 'primary';
     @property({ type: Boolean, reflect: true }) loading = false;

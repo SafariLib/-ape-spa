@@ -67,12 +67,24 @@ importers:
 
   packages/ape-ui:
     devDependencies:
+      '@fontsource-variable/noto-emoji':
+        specifier: ^5.0.19
+        version: 5.0.19
+      '@fontsource-variable/roboto-serif':
+        specifier: ^5.0.14
+        version: 5.0.14
       '@fontsource/allison':
         specifier: ^5.0.20
         version: 5.0.20
+      '@fontsource/noto-color-emoji':
+        specifier: ^5.0.27
+        version: 5.0.27
       '@fontsource/roboto':
         specifier: ^5.0.13
         version: 5.0.13
+      '@fontsource/roboto-mono':
+        specifier: ^5.0.18
+        version: 5.0.18
       '@storybook/addon-essentials':
         specifier: ^8.1.2
         version: 8.1.2(@types/react@18.3.2)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -904,8 +916,20 @@ packages:
   '@fal-works/esbuild-plugin-global-externals@2.1.2':
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
 
+  '@fontsource-variable/noto-emoji@5.0.19':
+    resolution: {integrity: sha512-IV53ztajg5UBD2mgR7Wcrv37+UBl32ZKblY7tK/VLKK8pWsJYPaeVBlakmI8ObFCuS1Auys+Zv88XQXz3D3RBg==}
+
+  '@fontsource-variable/roboto-serif@5.0.14':
+    resolution: {integrity: sha512-lzjPasdqDhuDaiavHn6OB2XIxptqHroXUNwnfoDUukU9whH7SlGFyt+s6MNFmVp5ijqv14uJdiDcd1SWTqwLKQ==}
+
   '@fontsource/allison@5.0.20':
     resolution: {integrity: sha512-bJDU1tRNMiEnQATzJUkuXgCoQ1sn3gouA1rtjXyE1ZPSzmkYcAvHz58PUmn5R8ZGNBvlZLF/5hOYxjK4pXojqw==}
+
+  '@fontsource/noto-color-emoji@5.0.27':
+    resolution: {integrity: sha512-gsIMN5o8qoRLrA+XyDNKKnMNpTbwpNbINisJqirLOLXl83arOV2sHRnNOkVht2gzUcImUxEUBGektp56G3Vj9w==}
+
+  '@fontsource/roboto-mono@5.0.18':
+    resolution: {integrity: sha512-hKuwk/cy3i6fWPzazT5xjgWq4YNqZWDHVbJh2Wwj3KYvWGi2v3ToBw/4LKQ+ggEkPLcIG6VU8GpCT3Xtf+mbbA==}
 
   '@fontsource/roboto@5.0.13':
     resolution: {integrity: sha512-j61DHjsdUCKMXSdNLTOxcG701FWnF0jcqNNQi2iPCDxU8seN/sMxeh62dC++UiagCWq9ghTypX+Pcy7kX+QOeQ==}
@@ -5154,7 +5178,15 @@ snapshots:
 
   '@fal-works/esbuild-plugin-global-externals@2.1.2': {}
 
+  '@fontsource-variable/noto-emoji@5.0.19': {}
+
+  '@fontsource-variable/roboto-serif@5.0.14': {}
+
   '@fontsource/allison@5.0.20': {}
+
+  '@fontsource/noto-color-emoji@5.0.27': {}
+
+  '@fontsource/roboto-mono@5.0.18': {}
 
   '@fontsource/roboto@5.0.13': {}
 

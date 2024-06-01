@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import type { PaletteColor, RelativeSize } from '../../components-utils';
-import './component';
+import type { PaletteColor, RelativeSize } from '../../utils';
 
 const meta: Meta = {
     title: 'Loader/ape-loader',

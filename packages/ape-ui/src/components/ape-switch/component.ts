@@ -1,7 +1,7 @@
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
-import { FormAssociatedElement } from '../../components-utils';
+import { FormAssociatedElement } from '../../utils';
 import styles from './styles';
 
 @customElement('ape-switch')

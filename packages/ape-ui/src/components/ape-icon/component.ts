@@ -5,7 +5,7 @@ import {
     type IconVariant,
     type PaletteColor,
     type RelativeSizeOrFullWidth
-} from '../../components-utils';
+} from '../../utils';
 import styles from './styles';
 
 export class BaseIcon extends Element {

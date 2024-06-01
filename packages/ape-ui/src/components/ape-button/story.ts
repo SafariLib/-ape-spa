@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import type { ApeButtonVariant } from '../../components-utils';
-import './component';
+import type { ApeButtonVariant } from '../../utils';
 
 const meta: Meta = {
     title: 'Button/ape-button',
