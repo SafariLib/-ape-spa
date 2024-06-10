@@ -13,7 +13,7 @@ export default css`
         --palette-shadow: #00000050;
         --palette-shadow-light: #00000020;
 
-        
+        // --spacing-radius-1
         // --ape-button-bg-color
         // --ape-button-border-color
         // --ape-button-color
@@ -23,22 +23,6 @@ export default css`
         // --ape-button-selected-bg-color
         // --ape-button-selected-border-color
         // --ape-button-selected-color
-
-        // --ape-button-secondary-bg-color
-        // --ape-button-secondary-border-color
-        // --ape-button-secondary-color
-        // --ape-button-secondary-disabled-bg-color
-        // --ape-button-secondary-disabled-border-color
-        // --ape-button-secondary-disabled-color
-        // --ape-button-secondary-selected-bg-color
-        // --ape-button-secondary-selected-border-color
-        // --ape-button-secondary-selected-color
-
-        // --ape-button-text-color
-        // --ape-button-text-disabled-color
-        // --ape-button-text-selected-bg-color
-        // --ape-button-text-selected-color
-
         // --ape-button-min-width
         // --ape-button-min-height
         // --ape-button-height
@@ -48,5 +32,5 @@ export default css`
         // --ape-button-border-radius
         // --ape-button-border
         // --ape-button-transitions
-        }
+    }
 `;

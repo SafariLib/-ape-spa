@@ -40,8 +40,10 @@ export class ApeButton extends FormAssociatedElement {
             case 'color':
                 {
                     const color = isValidColor(value) ? value : '';
-                    this.style.setProperty('--internal-bg-color', color);
-                    this.style.setProperty('--internal-border-color', color);
+                    this.style.setProperty('--ape-button-bg-color', color);
+                    this.style.setProperty('--ape-button-border-color', color);
+                    this.style.setProperty('--ape-button-selected-bg-color', color);
+                    this.style.setProperty('--ape-button-selected-border-color', color);
                     break;
                 }
         }
