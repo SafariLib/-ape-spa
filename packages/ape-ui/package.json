@@ -38,10 +38,12 @@
   "scripts": {
     "build": "tsc --project tsconfig.json && vite build",
     "build:storybook": "storybook build",
+    "test": "vitest",
     "storybook": "storybook dev -p 6006",
     "deploy": "pnpm build && npm publish --access public"
   },
   "devDependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.0.21",
     "@fontsource-variable/noto-emoji": "^5.0.19",
     "@fontsource-variable/roboto-serif": "^5.0.14",
     "@fontsource/allison": "^5.0.20",

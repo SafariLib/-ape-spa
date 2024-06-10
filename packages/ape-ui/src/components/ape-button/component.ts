@@ -1,6 +1,7 @@
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { FormAssociatedElement, type ApeButtonVariant } from '../../utils';
+import { isValidColor } from '../../utils/css';
 import { fonts } from '../../utils/stylesheets';
 import styles from './styles';
 
@@ -12,6 +13,7 @@ export class ApeButton extends FormAssociatedElement {
     @property({ type: Boolean, reflect: true }) loading = false;
     @property({ type: Boolean, reflect: true }) disabled = false;
     @property({ type: Boolean, reflect: true }) selected = false;
+    @property({ type: String, reflect: true }) color?: string;
     @property({ type: Boolean }) submit = false;
     @property({ type: String }) href?: string;
 
@@ -30,6 +32,19 @@ export class ApeButton extends FormAssociatedElement {
                       ${this._renderContent()}
                   </button>
               `;
+    }
+
+    override attributeChangedCallback(name: string, old: string, value: string) {
+        super.attributeChangedCallback(name, old, value);
+        switch (name) {
+            case 'color':
+                {
+                    const color = isValidColor(value) ? value : '';
+                    this.style.setProperty('--internal-bg-color', color);
+                    this.style.setProperty('--internal-border-color', color);
+                    break;
+                }
+        }
     }
 
     private _handleClick(e: Event & { target: HTMLButtonElement }) {
@@ -51,7 +66,7 @@ export class ApeButton extends FormAssociatedElement {
             ${this.loading
                 ? html` <ape-loader size="small" color=${this.disabled ? 'disabled' : 'text'}></ape-loader> `
                 : void 0}
-            <span class="${this.tagName}_content">
+            <span class="${this.getElementTagName()}_content">
                 <slot></slot>
             </span>
         `;

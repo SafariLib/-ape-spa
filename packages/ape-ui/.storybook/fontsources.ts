@@ -1,3 +1,4 @@
+import '@fontsource-variable/jetbrains-mono';
 import '@fontsource/allison/400.css';
 import '@fontsource/noto-color-emoji/400.css';
 import '@fontsource/noto-color-emoji/emoji-400.css';
